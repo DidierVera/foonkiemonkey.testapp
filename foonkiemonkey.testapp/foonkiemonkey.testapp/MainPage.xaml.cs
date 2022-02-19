@@ -16,7 +16,7 @@ namespace foonkiemonkey.testapp
         private async void BtnGetInTouch_Clicked(object sender, EventArgs e)
         {
             var emailHelper = new SendEmailHelper();
-            var subject = "Iwant a quote";
+            var subject = "I want a quote";
             var body = "I need you to build an application";
 
             loadingIndicator.IsRunning = true;

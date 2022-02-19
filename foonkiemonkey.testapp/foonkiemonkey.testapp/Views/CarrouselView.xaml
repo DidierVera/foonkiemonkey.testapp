@@ -23,16 +23,15 @@
         <IndicatorView 
             x:Name="indicatorView"
              AbsoluteLayout.LayoutFlags="PositionProportional"
-            AbsoluteLayout.LayoutBounds=".5,1.2,autoSize, autoSize" 
+            AbsoluteLayout.LayoutBounds=".5,1.1,autoSize, autoSize" 
             Margin="0,0,0,40"
             IndicatorColor="#130F2647"
-            SelectedIndicatorColor="Transparent"
+            SelectedIndicatorColor="#000"
             HorizontalOptions="Center">
             <IndicatorView.IndicatorTemplate>
                 <DataTemplate>
                     <StackLayout HeightRequest="1">
-                        <BoxView HeightRequest="1" WidthRequest="35" BackgroundColor="#000" HorizontalOptions="StartAndExpand" />
-                        <Label Text="{Binding Indicator}" TextColor="#000" FontFamily="DM-Serif-Display" />
+                        <BoxView HeightRequest="1" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" WidthRequest="35" />
                     </StackLayout>
                 </DataTemplate>
             </IndicatorView.IndicatorTemplate>

@@ -1,12 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="foonkiemonkey.testapp.Views.LocationsView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:controls="clr-namespace:foonkiemonkey.testapp.Views"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="foonkiemonkey.testapp.Views.LocationsView">
+    <StackLayout>
+        <Image
+            Source="img_logo"
+            HorizontalOptions="End"
+            Margin="0,22,5,0" />
+        <Label  
+            TextColor="#FFF" 
+            FontSize="12" 
+            HorizontalTextAlignment="End"
+            FontFamily="Rubik-Bold" 
+            FontAttributes="Bold"
+            Text="Bogotá:" />
+        <Label  
+            TextColor="#FFF" 
+            FontSize="12" 
+            HorizontalTextAlignment="End"
+            FontFamily="Rubik-Regular" 
+            Text=" Calle 106 # 54-15 of. 307/308" />
+        <Label  
+            TextColor="#FFF" 
+            FontSize="12" 
+            HorizontalTextAlignment="End"
+            FontFamily="Rubik-Bold" 
+            FontAttributes="Bold"
+            Text="Harpenden, UK:" />
+        <Label  
+            TextColor="#FFF" 
+            FontSize="12" 
+            HorizontalTextAlignment="End"
+            FontFamily="Rubik-Regular" 
+            Text="Harpenden Hall, Southdown Rd" />
+        <Label  
+            TextColor="#FFF" 
+            FontSize="12" 
+            HorizontalTextAlignment="End"
+            FontFamily="Rubik-Bold" 
+            FontAttributes="Bold"
+            Text="Miami, USA:" />
+        <Label  
+            TextColor="#FFF" 
+            FontSize="12" 
+            HorizontalTextAlignment="End"
+            FontFamily="Rubik-Regular" 
+            Text="990 Biscayne Blvd #501" />
+        <controls:CustomLine HorizontalOptions="End" Margin="6,20" />
+        <Label  
+            TextColor="#FFF" 
+            FontSize="12" 
+            Margin="0,0,0,33"
+            HorizontalTextAlignment="End"
+            FontFamily="Rubik-Regular" 
+            Text="Foonkie Monkey 2021" />
+    </StackLayout>
+</ContentView>

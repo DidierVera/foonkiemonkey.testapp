@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace foonkiemonkey.testapp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CustomLine : ContentPage
+    public partial class CustomLine : ContentView
     {
         public CustomLine()
         {

@@ -10,7 +10,7 @@ using Xamarin.Forms.Xaml;
 namespace foonkiemonkey.testapp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class LocationsView : ContentPage
+    public partial class LocationsView : ContentView
     {
         public LocationsView()
         {
