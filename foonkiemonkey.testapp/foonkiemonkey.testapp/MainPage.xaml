@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:foonkiemonkey.testapp.Views"
              NavigationPage.HasNavigationBar="False"
              x:Class="foonkiemonkey.testapp.MainPage">
     <AbsoluteLayout>
@@ -11,7 +12,7 @@
             <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,0.36" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#B3DDD8"  />
             <StackLayout AbsoluteLayout.LayoutBounds="0,.6,1,0.40" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#AAAACC"/>
             <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,0.24" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#29ABE1"/>
-            <StackLayout AbsoluteLayout.LayoutBounds=".5,0,1,.915" AbsoluteLayout.LayoutFlags="All"  BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout AbsoluteLayout.LayoutBounds=".5,0,1,1" AbsoluteLayout.LayoutFlags="All"  BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                 <Image
                     Source="img_logo"
                     HorizontalOptions="CenterAndExpand"
@@ -57,13 +58,10 @@
                     HorizontalOptions="Start"
                     WidthRequest="58"
                     BackgroundColor="#FFF" />
-                <BoxView
-                    HeightRequest="508"
-                    CornerRadius="16"
-                    BackgroundColor="#E6E3EF"
-                    WidthRequest="269"
-                    HorizontalOptions="CenterAndExpand"/>
-                <AbsoluteLayout Margin="0,20,0,0">
+                <!--Carousel view here-->
+                    <controls:CarrouselView />
+
+                    <AbsoluteLayout Margin="0,40,0,0">
                     <Image
                         Source="img_foonkie_2" 
                         AbsoluteLayout.LayoutBounds="-54,0,autoSize,autoSize" />

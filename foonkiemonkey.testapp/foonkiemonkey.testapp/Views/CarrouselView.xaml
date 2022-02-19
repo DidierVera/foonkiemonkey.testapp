@@ -1,12 +1,46 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="foonkiemonkey.testapp.Views.CarrouselView">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+        <AbsoluteLayout>
+        <CarouselView IndicatorView="indicatorView" x:Name="carouselVw" AbsoluteLayout.LayoutBounds="0,0,autoSize, autoSize" BackgroundColor="Transparent" Margin="50, 0">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="30" Padding="0" BackgroundColor="#E6E3EF"  >
+                        <StackLayout>
+                            <Frame CornerRadius="30">
+                                <Image x:Name="imgField" Source="{Binding Image}" />
+                            </Frame>
+                            <Label x:Name="lblTitle" Margin="28,20" FontFamily="DM-Serif-Display" Text="{Binding Title}" FontSize="30" TextColor="#000"  />
+                            <BoxView HeightRequest="1" Margin="28, 0" WidthRequest="35" BackgroundColor="#000" HorizontalOptions="StartAndExpand" />
+                            <Label x:Name="lblDescription" Margin="28, 20" FontFamily="Rubik-Regular" FontSize="12" Text="{Binding Description}" TextColor="#000" />
+                            <ImageButton x:Name="btnViewProject" HorizontalOptions="StartAndExpand" BackgroundColor="Transparent" Margin="28,0" Source="img_carousel_button" />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+        <IndicatorView 
+            x:Name="indicatorView"
+             AbsoluteLayout.LayoutFlags="PositionProportional"
+            AbsoluteLayout.LayoutBounds=".5,1.2,autoSize, autoSize" 
+            Margin="0,0,0,40"
+            IndicatorColor="#130F2647"
+            SelectedIndicatorColor="Transparent"
+            HorizontalOptions="Center">
+            <IndicatorView.IndicatorTemplate>
+                <DataTemplate>
+                    <StackLayout HeightRequest="1">
+                        <BoxView HeightRequest="1" WidthRequest="35" BackgroundColor="#000" HorizontalOptions="StartAndExpand" />
+                        <Label Text="{Binding Indicator}" TextColor="#000" FontFamily="DM-Serif-Display" />
+                    </StackLayout>
+                </DataTemplate>
+            </IndicatorView.IndicatorTemplate>
+        </IndicatorView>
+        <ImageButton AbsoluteLayout.LayoutBounds=".03,.5,autoSize, autoSize" BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="PositionProportional"
+            Source="img_arrow_left" />
+        <ImageButton AbsoluteLayout.LayoutBounds=".97,.5,autoSize, autoSize" BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="PositionProportional"
+                Source="img_arrow_right" />
+        </AbsoluteLayout>
+              
+</ContentView>

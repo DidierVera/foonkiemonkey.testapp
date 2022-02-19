@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xamd.ImageCarousel.Forms.Plugin.iOS;
 
 namespace foonkiemonkey.testapp.iOS
 {
@@ -24,7 +25,7 @@ namespace foonkiemonkey.testapp.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
-
+            ImageCarouselRenderer.Init();
             return base.FinishedLaunching(app, options);
         }
     }

@@ -1,9 +1,9 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Xamd.ImageCarousel.Forms.Plugin.Droid;
 
 namespace foonkiemonkey.testapp.Droid
 {
@@ -17,6 +17,7 @@ namespace foonkiemonkey.testapp.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+            ImageCarouselRenderer.Init();
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
