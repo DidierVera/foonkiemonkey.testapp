@@ -30,8 +30,9 @@
             HorizontalOptions="Center">
             <IndicatorView.IndicatorTemplate>
                 <DataTemplate>
-                    <StackLayout HeightRequest="1">
+                    <StackLayout>
                         <BoxView HeightRequest="1" HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" WidthRequest="35" />
+                        <Label Text="{Binding Indicator}" FontSize="14" FontFamily="DM-Serif-Display" HorizontalOptions="CenterAndExpand" IsVisible="False" />
                     </StackLayout>
                 </DataTemplate>
             </IndicatorView.IndicatorTemplate>

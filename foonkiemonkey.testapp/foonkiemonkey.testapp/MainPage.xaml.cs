@@ -1,6 +1,5 @@
 ﻿using foonkiemonkey.testapp.Helpers;
 using foonkiemonkey.testapp.Pages;
-using Infrastructure.ViewModel;
 using System;
 using Xamarin.Forms;
 
