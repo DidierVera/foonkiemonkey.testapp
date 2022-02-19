@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Detalle"
+             x:Class="foonkiemonkey.testapp.Pages.DetailsPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="LightGray" Margin="50" VerticalOptions="Center">
+            <StackLayout VerticalOptions="Center" BackgroundColor="White" Padding="10" Margin="1">
+                <Image   x:Name="imgAvatar" HorizontalOptions="Center" WidthRequest="100" HeightRequest="100" />
+                <Label x:Name="lblId" FontSize="18" FontFamily="Rubik-Regular" />
+                <Label x:Name="lblFirstName" FontSize="18" FontFamily="Rubik-Regular" />
+                <Label x:Name="lblLastName" FontSize="18" FontFamily="Rubik-Regular"/>
+                <Label x:Name="lblEmail" FontSize="18" FontFamily="Rubik-Regular"/>
+                <Label x:Name="lblNoResult"
+                IsVisible="False"
+                TextColor="Red"
+                FontSize="18" FontFamily="Rubik-Regular"
+                HorizontalTextAlignment="Center"
+                Text="Este usuario no se encuentra almacenado en la base de datos" />
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

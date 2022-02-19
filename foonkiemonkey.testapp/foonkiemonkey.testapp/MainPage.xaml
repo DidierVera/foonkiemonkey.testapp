@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="foonkiemonkey.testapp.MainPage">
+    <AbsoluteLayout>
+        <ActivityIndicator x:Name="loadingIndicator" Color="Orange" AbsoluteLayout.LayoutBounds=".5,.5 " />
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <!--implementamos overlapping-->
+        <AbsoluteLayout BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,0.36" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#B3DDD8"  />
+            <StackLayout AbsoluteLayout.LayoutBounds="0,.6,1,0.40" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#AAAACC"/>
+            <StackLayout AbsoluteLayout.LayoutBounds="0,1,1,0.24" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="#29ABE1"/>
+            <StackLayout AbsoluteLayout.LayoutBounds=".5,0,1,.915" AbsoluteLayout.LayoutFlags="All"  BackgroundColor="Transparent" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image
+                    Source="img_logo"
+                    HorizontalOptions="CenterAndExpand"
+                    Margin="0,50,0,0" />
+                <BoxView
+                    HeightRequest="1"
+                    HorizontalOptions="Center"
+                    WidthRequest="58"
+                    Margin="0,22,0,0"
+                    BackgroundColor="#000" />
+                <Label x:Name="originLabel" 
+                    TextColor="#000" 
+                    HorizontalTextAlignment="Center"
+                    FontSize="30" 
+                    FontFamily="DM-Serif-Display" 
+                    Text="Expert Samurais
+                        on Develop Secure apps 
+                        with Sensitive data." />
+                <Label  
+                    TextColor="#000" 
+                    Margin="50,14,50,21"
+                    FontSize="14" 
+                    HorizontalTextAlignment="Center"
+                    FontFamily="Rubik-Regular" 
+                    Text="We are samurais code monkeys that masters the most recent data security protocols, encrypted methodologies and Blockchain development." />
+
+                <ImageButton
+                    Clicked="BtnGetInTouch_Clicked"
+                    HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="Transparent" 
+                    Source="img_button"  />
+                <Image
+                    Source="img_foonkie_1"  />
+                <Label 
+                    TextColor="#FFF" 
+                    FontSize="18" 
+                    Margin="53,0,0,0"
+                    FontFamily="DM-Serif-Display" 
+                    Text="Case studies" />
+                <BoxView
+                    HeightRequest="1"
+                    Margin="53,5,0,25"
+                    HorizontalOptions="Start"
+                    WidthRequest="58"
+                    BackgroundColor="#FFF" />
+                <BoxView
+                    HeightRequest="508"
+                    CornerRadius="16"
+                    BackgroundColor="#E6E3EF"
+                    WidthRequest="269"
+                    HorizontalOptions="CenterAndExpand"/>
+                <AbsoluteLayout Margin="0,20,0,0">
+                    <Image
+                        Source="img_foonkie_2" 
+                        AbsoluteLayout.LayoutBounds="-54,0,autoSize,autoSize" />
+                    <StackLayout
+                        Padding="30"
+                        AbsoluteLayout.LayoutBounds="0,100,autoSize,autoSize"
+                        HorizontalOptions="EndAndExpand">
+                        <Label
+                            Margin="0"
+                            TextColor="#FFF" 
+                            FontSize="24" 
+                            HorizontalTextAlignment="End"
+                            FontFamily="DM-Serif-Display" 
+                            Text="Let's work
+                            together!" />
+                        <ImageButton 
+                            Clicked="BtnGetInTouch_Clicked"
+                            HorizontalOptions="End"
+                            BackgroundColor="Transparent" 
+                            Source="img_button" 
+                            WidthRequest="130" 
+                            HeightRequest="40"
+                            Padding="0,0,-45,0" />
+                        <BoxView
+                            HeightRequest="1"
+                            Margin="6"
+                            HorizontalOptions="End"
+                            WidthRequest="58"
+                            BackgroundColor="#FFF" />
+                        <Image
+                            Source="img_logo"
+                            HorizontalOptions="End"
+                            Margin="0,22,5,0" />
+                        <Label  
+                            TextColor="#FFF" 
+                            FontSize="12" 
+                            HorizontalTextAlignment="End"
+                            FontFamily="Rubik-Bold" 
+                            FontAttributes="Bold"
+                            Text="Bogotá:" />
+                        <Label  
+                            TextColor="#FFF" 
+                            FontSize="12" 
+                            HorizontalTextAlignment="End"
+                            FontFamily="Rubik-Regular" 
+                            Text=" Calle 106 # 54-15 of. 307/308" />
+                        <Label  
+                            TextColor="#FFF" 
+                            FontSize="12" 
+                            HorizontalTextAlignment="End"
+                            FontFamily="Rubik-Bold" 
+                            FontAttributes="Bold"
+                            Text="Harpenden, UK:" />
+                        <Label  
+                            TextColor="#FFF" 
+                            FontSize="12" 
+                            HorizontalTextAlignment="End"
+                            FontFamily="Rubik-Regular" 
+                            Text="Harpenden Hall, Southdown Rd" />
+                        <Label  
+                            TextColor="#FFF" 
+                            FontSize="12" 
+                            HorizontalTextAlignment="End"
+                            FontFamily="Rubik-Bold" 
+                            FontAttributes="Bold"
+                            Text="Miami, USA:" />
+                        <Label  
+                            TextColor="#FFF" 
+                            FontSize="12" 
+                            HorizontalTextAlignment="End"
+                            FontFamily="Rubik-Regular" 
+                            Text="990 Biscayne Blvd #501" />
+                        <BoxView
+                            HeightRequest="1"
+                            Margin="6,20"
+                            HorizontalOptions="End"
+                            WidthRequest="58"
+                            BackgroundColor="#FFF" />
+                        <Label  
+                            TextColor="#FFF" 
+                            FontSize="12" 
+                            Margin="0,0,0,33"
+                            HorizontalTextAlignment="End"
+                            FontFamily="Rubik-Regular" 
+                            Text="Foonkie Monkey 2021" />
+                    </StackLayout>
+                </AbsoluteLayout>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ScrollView>
+        <ImageButton 
+            Source="img_menu_button" 
+            AbsoluteLayout.LayoutBounds="1.1,1.05,autoSize, autoSize" 
+            AbsoluteLayout.LayoutFlags="PositionProportional" 
+            Padding="20" 
+            BorderWidth="1"
+            BackgroundColor="Transparent"
+            Clicked="BtnList_Clicked" />
+    </AbsoluteLayout>
+</ContentPage>

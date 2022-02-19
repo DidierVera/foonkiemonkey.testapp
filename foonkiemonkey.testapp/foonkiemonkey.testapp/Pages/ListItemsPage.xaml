@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:foonkiemonkey.testapp.Controls"
+             Title="Lista de usuarios"
+             x:Class="foonkiemonkey.testapp.Pages.ListItemsPage">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <ActivityIndicator x:Name="loadingIndicator" Color="Orange" AbsoluteLayout.LayoutBounds=".5,.5, autoSize, autoSize " AbsoluteLayout.LayoutFlags="PositionProportional" />
+            <StackLayout  AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Página: " VerticalOptions="CenterAndExpand" FontSize="15" FontFamily="Rubik-Bold" FontAttributes="Bold" />
+                    <Picker x:Name="pkrPages" Margin="8" />
+
+                </StackLayout>
+                <BoxView WidthRequest="160" HeightRequest="1" BackgroundColor="LightGray" HorizontalOptions="CenterAndExpand" />
+                <ListView x:Name="MainListView" HasUnevenRows="True">
+                    <ListView.ItemTemplate >
+                        <DataTemplate>
+                            <ViewCell  Tapped="OnItemTapped">
+                                <StackLayout Padding="20,10,5,5" Orientation="Horizontal">
+                                    <Frame CornerRadius="100"  HorizontalOptions="Start" WidthRequest="70" HeightRequest="60" Padding="-10" IsClippedToBounds="True">
+                                        <Image x:Name="imgAvatar" VerticalOptions="Center" WidthRequest="70" HeightRequest="60"  HorizontalOptions="Center" Source="{Binding Avatar}" />
+                                    </Frame>
+                                    <StackLayout Orientation="Vertical">
+                                        <Label x:Name="lblID" Text="{Binding Id}" IsVisible="False" />
+                                        <Label x:Name="lblFullName" VerticalOptions="CenterAndExpand" Text="{Binding FullName}" FontFamily="Rubik-Regular" TextColor="#000" FontSize="18" />
+                                        <Label x:Name="lblEmail" VerticalOptions="CenterAndExpand" Text="{Binding Email}" FontFamily="Rubik-Regular" TextColor="#898686" FontSize="18" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <local:MyButton AbsoluteLayout.LayoutBounds="0.9,0.9,autoSize, autoSize" BorderWidth="1" BorderColor="#083666" AbsoluteLayout.LayoutFlags="PositionProportional" x:Name="btnSave" Text="Guardar" WidthRequest="100" HeightRequest="60" Clicked="OnBtnSave_Clicked" CornerRadius="35" />
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
