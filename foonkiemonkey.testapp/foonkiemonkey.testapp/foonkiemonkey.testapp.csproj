@@ -30,13 +30,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\CarouselView.xaml.cs">
+      <DependentUpon>CarouselView.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Pages\DetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\ListItemsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\CarrouselView.xaml">
+    <EmbeddedResource Update="Views\CarouselView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CustomLine.xaml">

@@ -49,7 +49,7 @@
                     Text="Case studies" />
                     <controls:CustomLine HorizontalOptions="Start" Margin="53,5,0,25" />
                     <!--Carousel view here-->
-                    <controls:CarrouselView />
+                    <controls:CarouselView />
 
                     <AbsoluteLayout Margin="0,40,0,0">
                     <Image

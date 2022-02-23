@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="foonkiemonkey.testapp.Views.CarrouselView">
+             x:Class="foonkiemonkey.testapp.Views.CarouselView">
         <AbsoluteLayout>
         <CarouselView IndicatorView="indicatorView" x:Name="carouselVw" AbsoluteLayout.LayoutBounds="0,0,autoSize, autoSize" BackgroundColor="Transparent" Margin="50, 0">
             <CarouselView.ItemTemplate>
@@ -38,9 +38,9 @@
             </IndicatorView.IndicatorTemplate>
         </IndicatorView>
         <ImageButton AbsoluteLayout.LayoutBounds=".03,.5,autoSize, autoSize" BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="PositionProportional"
-            Source="img_arrow_left" />
+            Source="img_arrow_left" Clicked="OnLeftTap" />
         <ImageButton AbsoluteLayout.LayoutBounds=".97,.5,autoSize, autoSize" BackgroundColor="Transparent" AbsoluteLayout.LayoutFlags="PositionProportional"
-                Source="img_arrow_right" />
+                Source="img_arrow_right" Clicked="OnRightTap" />
         </AbsoluteLayout>
               
 </ContentView>

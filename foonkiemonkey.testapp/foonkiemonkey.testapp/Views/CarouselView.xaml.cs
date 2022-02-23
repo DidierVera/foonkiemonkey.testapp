@@ -9,10 +9,10 @@ using Xamarin.Forms.Xaml;
 namespace foonkiemonkey.testapp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CarrouselView : ContentView
+    public partial class CarouselView : ContentView
     {
         public List<CarouselModel> items;
-        public CarrouselView()
+        public CarouselView()
         {
             InitializeComponent();
             BindingContext = this;
@@ -36,6 +36,26 @@ namespace foonkiemonkey.testapp.Views
             items.Add(item2);
 
             carouselVw.ItemsSource = items;
+        }
+
+        private void OnLeftTap(object sender, EventArgs e)
+        {
+            if (carouselVw.Position == 0)
+            {
+                carouselVw.Position = items.Count -1;
+            }
+            else
+                carouselVw.Position--;
+        }
+
+        private void OnRightTap(object sender, EventArgs e)
+        {
+            if (carouselVw.Position == items.Count - 1)
+            {
+                carouselVw.Position = 0;
+            }
+            else
+                carouselVw.Position++;
         }
     }
 }
